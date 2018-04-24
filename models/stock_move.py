@@ -11,9 +11,9 @@ class StockMove(models.Model):
     )
 
     @api.constrains('move_line_ids')
-    def _cehck_move_line_ids(self):
+    def _check_move_line_ids(self):
         for line in self.move_line_ids:
-            if not line.lot_name or not line.qty_done:
+            if not (line.lot_id or line.lot_name) or not line.qty_done:
                 raise ValidationError(_("All serial numbers and quantities must be placed"))
 
     @api.multi
