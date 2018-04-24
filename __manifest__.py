@@ -23,8 +23,10 @@
     'version': '1.0',
     'author': 'Humanytek',
     'website': 'http://humanytek.com',
-    'depends': [],  # TODO [IMP]
+    'depends': [
+        'stock',
+    ],
     'data': [
-        'views/stock_move_import_serial_numbers.xml',
+        'views/stock_move.xml',
     ]
 }

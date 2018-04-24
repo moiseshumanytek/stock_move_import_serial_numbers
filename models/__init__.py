@@ -18,4 +18,4 @@
 #
 ##############################################################################
 
-from . import stock_move_import_serial_numbers
+from . import stock_move
