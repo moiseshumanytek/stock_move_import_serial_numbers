@@ -20,7 +20,7 @@
 
 {
     'name': 'Stock Move Import Serial Numbers',
-    'version': '1.2.0',
+    'version': '1.3.0',
     'author': 'Humanytek',
     'website': 'http://humanytek.com',
     'depends': [

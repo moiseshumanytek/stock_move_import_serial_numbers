@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
   <data>
-    <!-- Inherit Form view -->
     <record id="view_stock_move_operations_import_serial_numbers" model="ir.ui.view">
       <field name="name">stock.move.operations.form.import_serial_numbers</field>
       <field name="model">stock.move</field>
