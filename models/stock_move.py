@@ -10,12 +10,12 @@ class StockMove(models.Model):
         filters='*.csv',
     )
 
-    @api.constrains('move_line_ids')
-    def _check_move_line_ids(self):
-        type = self.picking_id.picking_type_id.code
-        for line in self.move_line_ids:
-            if (type == 'incoming' and not line.lot_name) or (type == 'outgoing' and not line.lot_id) or not line.qty_done:
-                raise ValidationError(_("All serial numbers and quantities must be placed"))
+    #@api.constrains('move_line_ids')
+    #def _check_move_line_ids(self):
+    #    type = self.picking_id.picking_type_id.code
+    #    for line in self.move_line_ids:
+    #        if (type == 'incoming' and not line.lot_name) or (type == 'outgoing' and not line.lot_id) or not line.qty_done:
+    #            raise ValidationError(_("All serial numbers and quantities must be placed"))
 
     def _create_lines(self, serial_numbers):
         while len(self.move_line_ids) < len(serial_numbers):
